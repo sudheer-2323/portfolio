@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #12141d;
+      color: #dcdcdc;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      background-color: #12141d;
+    }
+    .intro-text {
+      max-width: 50%;
+    }
+    header h1 {
+      font-size: 3em;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #aaaaaa;
+    }
+    .profile-img {
+      max-width: 300px;
+      border-radius: 12px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background-color: #1e212c;
+      padding: 15px 0;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #f7c600;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1a1d26;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    h2 {
+      color: #f7c600;
+      margin-bottom: 20px;
+    }
+    .project, .internship, .achievement, .skill {
+      margin-bottom: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project:hover, .internship:hover, .achievement:hover, .skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    .project img, .internship img, .achievement img {
+      width: 300px;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .skill {
+      background-color: #2a2d3a;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e212c;
+      color: #888;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .intro-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      .profile-img {
+        max-width: 80%;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="intro-text">
+      <h1>Sudheer Muppineedi</h1>
+      <p>Full stack developer</p>
+    </div>
+    <img src="sudheer.jpg" alt="Your Photo" class="profile-img">
+  </header>
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#internships">Internships</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate and detail-oriented full stack developer with a strong foundation in both front-end and back-end technologies. I enjoy building responsive, user-friendly web applications and constantly learning new tools and techniques to improve my craft. With hands-on experience in real-world projects and internships, I strive to deliver efficient and innovative solutions.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+        <div class="skill">Java</div>
+        <div class="skill">C</div>  
+      <div class="skill">Python</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">Express.js</div>
+      <div class="skill">MongoDB</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="simmonsay.jpg" alt="Project 1 Screenshot">
+      <h3>Simmon Say game</h3>
+      <p>The Simon Says game you built using JavaScript, CSS, and HTML is a fun and interactive memory challenge that tests a player's ability to recall and replicate sequences. The game presents a pattern of colors or sounds, and the player must accurately follow the order, with each round increasing in difficulty. JavaScript powers the logic, tracking user inputs and dynamically adjusting the sequence length, while CSS ensures a visually appealing and responsive design. HTML structures the game elements, making it accessible across different devices. With engaging animations and sound effects, your project combines creativity and technical skill, offering an enjoyable experience while showcasing your front-end development expertise.</p>
+    </div>
+    <div class="project">
+      <img src="portfol.jpg" alt="Project 2 Screenshot">
+      <h3>Portfolio project</h3>
+      <p>Your portfolio website, crafted using HTML, CSS, and JavaScript, serves as a dynamic showcase of your skills, projects, and personal branding. The HTML structure ensures a well-organized layout, CSS brings it to life with a visually appealing and responsive design, while JavaScript adds interactive elements, enhancing user experience. Your portfolio likely features project highlights, an about section, contact details, and engaging animations to make navigation intuitive and enjoyable. Whether it's sleek transitions, interactive components, or a clean professional design, your portfolio reflects your technical expertise and creativity, making a lasting impression on visitors.</p>
+    </div>
+  </section>
+
+  <section id="internships">
+    <h2>Internships</h2>
+    <div class="internship">
+      <img src="download (1).jpg" alt="Company 1 Logo or Photo">
+      </div>
+      <div class="internship">
+        <h3>Skill Dizire</h3>
+      <p>with basic Java concepts like syntax, object-oriented programming principles,
+        and advanced Java topics. .
+        Incorporates front-end technologies like HTML, CSS, and JavaScript
+        alongside back-end Java development, enabling to build interactive user
+        interfaces.
+        Focuses on the widely used Spring framework for building robust Java web
+        applications..</p>
+    </div>
+    <div class="internship">
+      <h3>Code soft</h3>
+      <p>Developed Python-based applications and scripts to automate tasks and
+        improve efficiency, Worked on real-world projects involving data analysis, web development, and
+        scripting</p>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="achievement">
+      <img src="leetcode.jpg" alt="Award or Certificate">
+      <h3>100 days consistent badge on LeetCode</h3>
+      <p>My dedication, hard work, and consistency in coding have fueled my growth, sharpened my problem-solving skills, and built resilience. Achieving the 100 Days LeetCode Badge is proof of my commitment to excellence</p>
+    </div>
+    <div class="achievement">
+      <img src="gate.jpg" alt="Award or Certificate">
+    <h3>Qualified in GATE 2025</h3>
+      <p>My strong foundation in core subjects like DBMS, OS, and CN, demonstrated by cracking the GATE 2025 exam, showcases my deep understanding of system architecture, data management, and network protocols.</p>
+    </div>
+    <div class="achievement">
+        <img src="jee.jpg" alt="Award or Certificate">
+      <h3>Qualified in JEE 2022</h3>
+        <p>My problem-solving skills have been a defining trait since childhood, reflected in your ability to tackle challenges with logic and precision. Cracking the JEE 2022 exam is a testament to your analytical mindset, perseverance, and ability to break down complex problems efficiently. This strong foundation continues to drive your success in technical problem-solving.</p>
+      </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sudheermuppineedi23@email.com" style="color: #f7c600;">sudheermuppineedi23@email.com</a></p>
+    <p>LeetCode <a href="https://leetcode.com/u/sudheer_chowdary_23/" target="_blank" style="color: #f7c600;">leetcode.com/in/yourprofile</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sudheer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        window.scrollTo({ top: target.offsetTop - 20, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
