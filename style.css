@@ -57,10 +57,24 @@
   }
   nav {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    background-color: #0a1828;
-    padding: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #101f30; /* Recommended background */
+    height: 60px;
+  }
+  
+  .nav-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #cbb26a;
+    letter-spacing: 1px;
+    margin-right: auto; /* Pushes nav links to the right */
+  }
+  
+  .nav-title span {
+    color: #8479e1; 
+    font-size:40px;
   }
   nav a {
     color: #ffffff;
