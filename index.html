@@ -7,205 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 			'Open Sans' ,sans-serif;
-      /* font-size: 17px; */
-    }
-    .name {
-    position: relative;
-    color: #BFA181;
-    cursor: pointer;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    font-size: 68px;
-  }
-
-  .name::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* space below text */
-    width: 0%;
-    height: 2px;
-    background-color: #BFA181;
-    transition: width 0.4s ease 0.2s; /* duration + delay */
-  }
-
-  .name:hover::after {
-    width: 100%;
-  }
-    body {
-      background-color: #0a1828;
-      color: #dcdcdc;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 60px 10%;
-      background-color: #0a1828;
-    }
-    .intro-text {
-      max-width: 50%;
-    }
-    header h1 {
-      font-size: 3em;
-      color: #ffffff;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #aaaaaa;
-    }
-    .profile-img {
-      max-width: 300px;
-      border-radius: 12px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      background-color: #0a1828;
-      padding: 15px 0;
-    }
-    nav a {
-      color: #ffffff;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 1.1em;
-      transition: color 0.3s;
-      font-weight: 500;
-      text-decoration: none;
-      margin: 0 20px;
-    }
-    nav a:hover {
-      color: #178582;
-    }
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #0a1828;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    }
-    h2 {
-      color: #178582;
-      margin-bottom: 20px;
-    }
-     .internship, .achievement, .skill {
-      margin-bottom: 30px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-     .internship:hover, .achievement:hover, .skill:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    }
-    .project img, .internship img, .achievement img {
-      width: 300px;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-    .skill {
-      background-color: #0a1828;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      color: #ffffff;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #0a1828;
-      color: #888;
-      margin-top: 40px;
-    }
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      .intro-text {
-        max-width: 100%;
-        margin-bottom: 20px;
-      }
-      .profile-img {
-        max-width: 80%;
-      }
-      nav {
-        flex-direction: column;
-      }
-    }
-
-.section-title {
-  font-size: 2.5em;
-  margin-bottom: 40px;
-  color: #20b2aa;
-}
-
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.project-card {
-  background-color: #1a1a1a;
-  border-radius: 12px;
-  padding: 20px;
-  width: 300px;              /* fixed width for side-by-side layout */
-  text-align: left;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-title {
-  color: #20b2aa;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.project-links a {
-  display: inline-block;
-  margin-right: 15px;
-  color: #20b2aa;
-  position: relative;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.project-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: #20b2aa;
-  transition: width 0.3s ease;
-}
-
-.project-links a:hover::after {
-  width: 100%;
-}
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -267,56 +69,84 @@
   </section>
 
   <section id="internships">
-    <h2>Internships</h2>
-    <div class="internship">
-      <img src="download (1).jpg" alt="internship">
-      </div>
-      <div class="internship">
-        <h3>Skill Dizire</h3>
-      <p>with basic Java concepts like syntax, object-oriented programming principles,
+    <h2 class="section-title">Internships</h2>
+    <div class="intership-container">
+      <div class="internship-card">
+        <h3 class="internship-title">SKill Dizire</h3>
+        <p>
+          with basic Java concepts like syntax, object-oriented programming principles,
         and advanced Java topics. .
         Incorporates front-end technologies like HTML, CSS, and JavaScript
         alongside back-end Java development, enabling to build interactive user
         interfaces.
         Focuses on the widely used Spring framework for building robust Java web
-        applications..</p>
-    </div>
-    <div class="internship">
-      <h3>Code soft</h3>
-      <p>Developed Python-based applications and scripts to automate tasks and
+        applications..
+        </p>
+      </div>
+      <div class="internship-card">
+        <h3 class="internship-title">Code Soft</h3>
+        <p>
+          Developed Python-based applications and scripts to automate tasks and
         improve efficiency, Worked on real-world projects involving data analysis, web development, and
-        scripting</p>
+        scripting
+        </p>
+      </div>
     </div>
   </section>
 
   <section id="achievements">
-    <h2>Achievements</h2>
-    <div class="achievement">
-      <img src="leetcode.jpg" alt="leetcode img">
-      <h3>100 days consistent badge on LeetCode</h3>
-      <p>My dedication, hard work, and consistency in coding have fueled my growth, sharpened my problem-solving skills, and built resilience. Achieving the 100 Days LeetCode Badge is proof of my commitment to excellence</p>
-    </div>
-    <div class="achievement">
-      <img src="gate.jpg" alt="Gate">
-    <h3>Qualified in GATE 2025</h3>
-      <p>My strong foundation in core subjects like DBMS, OS, and CN, demonstrated by cracking the GATE 2025 exam, showcases my deep understanding of system architecture, data management, and network protocols.</p>
-    </div>
-    <div class="achievement">
-        <img src="jee.jpg" alt="Jee">
-      <h3>Qualified in JEE 2022</h3>
-        <p>My problem-solving skills have been a defining trait since childhood, reflected in your ability to tackle challenges with logic and precision. Cracking the <b>JEE Advance and JEE Mains 2022 exam </b> is a testament to your analytical mindset, perseverance, and ability to break down complex problems efficiently. This strong foundation continues to drive your success in technical problem-solving.</p>
+    <h2 class="section-title">Achievements</h2>
+    <div class="achievements-grid">
+      <div class="achievement">
+        <img src="leetcode.jpg" alt="LeetCode Badge">
+        <h3>100 Days Badge on LeetCode</h3>
+        <p>My dedication, hard work, and consistency in coding have fueled my growth, sharpened my problem-solving skills, and built resilience.</p>
       </div>
       <div class="achievement">
-        <img src="th.jpeg" alt="Jee">
-      <h3>Excelled in Olympiads</h3>
-        <p>During my 8th standard, I excelled in Olympiad exams, securing top ranks at the state level. In the AMAT (Aryabhatta Mental Ability Test), I achieved State-Level 1st Rank, demonstrating exceptional problem-solving abilities and logical thinking. Additionally, in the MM (Maths Mahotsav Exam), I secured State-Level 2nd Rank, showcasing my strong mathematical proficiency and analytical skills. These achievements reflect my dedication to academic excellence and my ability to perform in competitive environments. </p>
+        <img src="gate.jpg" alt="GATE">
+        <h3>Qualified in GATE 2025</h3>
+        <p>Strong foundation in core subjects like DBMS, OS, and CN, demonstrated by cracking GATE 2025.</p>
+      </div>
+      <div class="achievement">
+        <img src="jee.jpg" alt="JEE">
+        <h3>Qualified in JEE 2022</h3>
+        <p>Cracked JEE Advance and Mains 2022, showcasing analytical skills and strong academic base.</p>
+      </div>
+      <div class="achievement">
+        <img src="th.jpeg" alt="Olympiads">
+        <h3>Excelled in Olympiads</h3>
+        <p>State 1st in AMAT and 2nd in MM, reflecting early proficiency in logical and mathematical reasoning.</p>
+      </div>
+    </div>
   </section>
+  
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sudheermuppineedi23@email.com" style="color: #f7c600;">sudheermuppineedi23@email.com</a></p>
-    <p>LeetCode <a href="https://leetcode.com/u/sudheer_chowdary_23/" target="_blank" style="color: #f7c600;">leetcode.com/in/sudheer_chowdary_23</a></p>
-    <p>Linked in: <a href="https://www.linkedin.com/in/sudheermuppineedi/" target="_blank" style="color: #f7c600;">linkedin.com/in/sudheermuppineedi</a></p>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto;">
+        <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border-radius: 6px; border: none;">
+        <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border-radius: 6px; border: none;">
+        <textarea name="message" rows="5" placeholder="Your Message" required style="padding: 10px; border-radius: 6px; border: none;"></textarea>
+        <button type="submit" style="background-color: #178582; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer;">Send</button>
+      </form>
+    
+      <div style="margin-top: 40px; text-align: center;">
+        <a href="mailto:sudheermuppineedi23@email.com" target="_blank" style="margin: 10px;">
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/new-post.png" alt="Email Icon"/>
+        </a>
+        <a href="https://www.linkedin.com/in/sudheermuppineedi/" target="_blank" style="margin: 10px;">
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png" alt="LinkedIn Icon"/>
+        </a>
+        <a href="https://leetcode.com/u/sudheer_chowdary_23/" target="_blank" style="margin: 10px;">
+          <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/ffffff/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png" alt="LeetCode Icon"/>
+        </a>
+        <a href="https://github.com/sudheer-2323" target="_blank" style="margin: 10px;">
+          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="GitHub Icon"/>
+        </a>
+      </div>
+    </section>
+    
   </section>
 
   <footer>
