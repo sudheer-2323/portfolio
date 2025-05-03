@@ -4,15 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 			'Open Sans' ,sans-serif;
+      /* font-size: 17px; */
     }
+    .name {
+    position: relative;
+    color: #BFA181;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 68px;
+  }
+
+  .name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* space below text */
+    width: 0%;
+    height: 2px;
+    background-color: #BFA181;
+    transition: width 0.4s ease 0.2s; /* duration + delay */
+  }
+
+  .name:hover::after {
+    width: 100%;
+  }
     body {
-      background-color: #12141d;
+      background-color: #0a1828;
       color: #dcdcdc;
     }
     header {
@@ -20,7 +48,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 60px 10%;
-      background-color: #12141d;
+      background-color: #0a1828;
     }
     .intro-text {
       max-width: 50%;
@@ -42,29 +70,31 @@
       display: flex;
       justify-content: center;
       gap: 40px;
-      background-color: #1e212c;
+      background-color: #0a1828;
       padding: 15px 0;
     }
     nav a {
       color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
+      font-family: 'Josefin Sans', sans-serif;
       font-size: 1.1em;
       transition: color 0.3s;
+      font-weight: 500;
+      text-decoration: none;
+      margin: 0 20px;
     }
     nav a:hover {
-      color: #f7c600;
+      color: #178582;
     }
     section {
       max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
-      background-color: #1a1d26;
+      background-color: #0a1828;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
     h2 {
-      color: #f7c600;
+      color: #178582;
       margin-bottom: 20px;
     }
     .project, .internship, .achievement, .skill {
@@ -88,7 +118,7 @@
       gap: 15px;
     }
     .skill {
-      background-color: #2a2d3a;
+      background-color: #0a1828;
       padding: 10px 20px;
       border-radius: 8px;
       font-weight: bold;
@@ -97,7 +127,7 @@
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #1e212c;
+      background-color: #0a1828;
       color: #888;
       margin-top: 40px;
     }
@@ -122,7 +152,7 @@
 <body>
   <header>
     <div class="intro-text">
-      <h1>Sudheer Muppineedi</h1>
+      <h1 style="color: #178582;"> Hey I'm <div class="name">Sudheer</div></h1>      
       <p>Full stack developer</p>
     </div>
     <img src="sudheer.jpg" alt="Your Photo" class="profile-img">
@@ -157,20 +187,12 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-<<<<<<< HEAD:portfolio.html
-      <img src="simmonsay.jpg" alt="Project 1">
-=======
       <img src="simmonsay.jpg" alt="proj1">
->>>>>>> ec0c8c98313d30ed6b3ea0a95756d9dabcb97ae7:index.html
       <h3>Simmon Say game</h3>
       <p>The Simon Says game you built using JavaScript, CSS, and HTML is a fun and interactive memory challenge that tests a player's ability to recall and replicate sequences. The game presents a pattern of colors or sounds, and the player must accurately follow the order, with each round increasing in difficulty. JavaScript powers the logic, tracking user inputs and dynamically adjusting the sequence length, while CSS ensures a visually appealing and responsive design. HTML structures the game elements, making it accessible across different devices. With engaging animations and sound effects, your project combines creativity and technical skill, offering an enjoyable experience while showcasing your front-end development expertise.</p>
     </div>
     <div class="project">
-<<<<<<< HEAD:portfolio.html
       <img src="portfol.jpg" alt="Project 2">
-=======
-      <img src="portfol.jpg" alt="Proj2">
->>>>>>> ec0c8c98313d30ed6b3ea0a95756d9dabcb97ae7:index.html
       <h3>Portfolio project</h3>
       <p>Your portfolio website, crafted using HTML, CSS, and JavaScript, serves as a dynamic showcase of your skills, projects, and personal branding. The HTML structure ensures a well-organized layout, CSS brings it to life with a visually appealing and responsive design, while JavaScript adds interactive elements, enhancing user experience. Your portfolio likely features project highlights, an about section, contact details, and engaging animations to make navigation intuitive and enjoyable. Whether it's sleek transitions, interactive components, or a clean professional design, your portfolio reflects your technical expertise and creativity, making a lasting impression on visitors.</p>
     </div>
@@ -179,11 +201,7 @@
   <section id="internships">
     <h2>Internships</h2>
     <div class="internship">
-<<<<<<< HEAD:portfolio.html
       <img src="download (1).jpg" alt="internship">
-=======
-      <img src="download (1).jpg" alt="intern">
->>>>>>> ec0c8c98313d30ed6b3ea0a95756d9dabcb97ae7:index.html
       </div>
       <div class="internship">
         <h3>Skill Dizire</h3>
