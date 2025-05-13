@@ -68,6 +68,7 @@
     padding: 0 40px;
     background-color: #101f30; /* Recommended background */
     height: 60px;
+    position: relative;
   }
   
   .nav-title {
@@ -153,11 +154,18 @@ transition: transform 0.4s ease;
 .profile-img:hover {
 transform: scale(1.05) rotate(1deg);
 }
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
+ .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex-wrap: nowrap;         /* Prevent wrapping */
+  overflow-x: auto;          /* Enable horizontal scroll */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: none;     /* Firefox - hide scrollbar */
+}
+.skills-list::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari - hide scrollbar */
+}
   /* .skill {
     background-color: #0a1828;
     padding: 10px 20px;
@@ -226,7 +234,38 @@ transform: scale(1.05) rotate(1deg);
     .profile-img {
       max-width: 80%;
     }
+     .skills-list {
+    flex-wrap: nowrap;         /* Force row scroll on small screens */
+    overflow-x: auto;
   }
+     .achievements-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .achievement {
+    width: 90% !important; /* Full width with some margin */
+  }
+  .project-card {
+    height: 200px !important;
+    width: 90% !important;
+  }
+
+  .project-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-overlay {
+    padding: 0.5rem;
+  }
+  }
+  @media (max-width: 480px) {
+  .project-card {
+    width: 100% !important;
+    height: auto;
+  }
+}
 
 .section-title {
 font-size: 2.5em;
@@ -241,7 +280,7 @@ justify-content: center;
 gap: 30px;
 }
 
-.project-card,.internship-card{
+.internship-card{
 background-color: #1a1a1a;
 border-radius: 12px;
 padding: 20px;
@@ -251,40 +290,109 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 transition: transform 0.3s ease;
 }
 
-.project-card:hover , .internship-card:hover{
+ .internship-card:hover{
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 8px 20px rgba(32, 178, 170, 0.5);
 }
 
-.project-title ,.internship-title{
+.internship-title{
 color: #20b2aa;
 font-size: 1.5em;
 margin-bottom: 10px;
 }
 
+.project-card {
+  position: relative;
+  overflow: hidden;
+  margin-top: 70px;
+  border-radius: 20px;
+  height: 320px;
+  width:700px;
+  background-color: #111;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 2s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.9s ease;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-links {
+  margin-top: 1rem;
+}
+
 .project-links a {
-display: inline-block;
-margin-right: 15px;
-color: #20b2aa;
-position: relative;
-text-decoration: none;
-transition: color 0.3s ease;
+  margin: 0 10px;
+  color: #00ffaa;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.project-links a::after {
-content: "";
-position: absolute;
-left: 0;
-bottom: -2px;
-width: 0;
-height: 2px;
-background-color: #20b2aa;
-transition: width 0.3s ease;
+.project-links a:hover {
+  color: #00ddcc;
 }
 
-.project-links a:hover::after {
-width: 100%;
+
+.project-links .live-demo {
+  position: relative;
+  color: #00ffaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
+
+.project-links .live-demo::after {
+  content: ' ➜';
+  position: absolute;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-links .live-demo:hover::after {
+  opacity: 1;
+  transform: translateX(5px);
+}
+.project-title{
+  color: lightgoldenrodyellow;
+}
+
+
 .intership-container {
 display: flex;
 flex-wrap: wrap;
@@ -295,7 +403,8 @@ gap: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
+    padding: 1rem;
   }
   
   .achievement {
@@ -305,6 +414,7 @@ gap: 30px;
     width: 45%; /* Two items per row */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    color: white;
   }
   
   .achievement:hover {
@@ -318,3 +428,7 @@ gap: 30px;
     border-radius: 8px;
     margin-bottom: 10px;
   }
+  .achievement h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}

@@ -19,14 +19,17 @@
     <li><a href="#internships">Internships</a></li>
     <li><a href="#achievements">Achievements</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="https://drive.google.com/file/d/1vcNcE30AEK5cdo7vtmYJQgkJlAJVLoz6/view?usp=sharing">Resume</a></li>
+    <!-- <li><a href="https://drive.google.com/file/d/1vcNcE30AEK5cdo7vtmYJQgkJlAJVLoz6/view?usp=sharing"  rel="noopener noreferrer" target="_blank" download >Resume</a></li> -->
   </ul>
+  
   </nav> 
   <header>
     <div class="intro-text">
       <h1 style="color: #178582;"> Hey I'm <div class="name">Sudheer</div></h1>      
       <p id="typing-text">Full stack developer</p>
     </div>
-    <img src="sudheer.jpg" alt="Your Photo" class="profile-img">
+    <img src="images/sudheer.jpg" alt="Your Photo" class="profile-img">
   </header>
   <section id="about">
     <h2>About Me</h2>
@@ -49,25 +52,44 @@
   </section>
     <section id="projects" class="projects-section">
       <h2 class="section-title">Projects</h2>
-    
       <div class="projects-container">
+
         <div class="project-card">
-          <h3 class="project-title">Portfolio Website</h3>
-          <p>My portfolio website, crafted using HTML, CSS, and JavaScript, serves as a dynamic showcase of your skills, projects, and personal branding. The HTML structure ensures a well-organized layout, CSS brings it to life with a visually appealing and responsive design, while JavaScript adds interactive elements, enhancing user experience. Your portfolio likely features project highlights, an about section, contact details, and engaging animations to make navigation intuitive and enjoyable.</p>
-          <div class="project-links">
-            <a href="https://github.com/sudheer-2323/portfolio" target="_blank">GitHub</a>
-            <a href="https://sudheer-2323.github.io/portfolio/" target="_blank">Live Demo</a>
-          </div>
-        </div>
+  <img src="images/wanderlust.jpg" alt="Portfolio Website Screenshot" class="project-image" />
+  <div class="project-overlay">
+  <h3 class="project-title">Wanderlust Stays</h3>
+  <p>Wanderlust Stays is a full-stack travel accommodation platform.</p>
+  <div class="project-links">
+    <a href="https://github.com/sudheer-2323/wanderlust" target="_blank">GitHub</a>
+    <a href="https://wanderlust-ra7g.onrender.com/listings" target="_blank" class="live-demo">Live Demo</a>
+  </div>
+  </div>
+</div>
         <div class="project-card">
-          <h3 class="project-title">Simon Game</h3>
-          <p>The Simon Says game you built using JavaScript, CSS, and HTML is a fun and interactive memory challenge that tests a player's ability to recall and replicate sequences. The game presents a pattern of colors or sounds, and the player must accurately follow the order, with each round increasing in difficulty. JavaScript powers the logic, tracking user inputs and dynamically adjusting the sequence length, while CSS ensures a visually appealing and responsive design.</p>
-          <div class="project-links">
-            <a href="https://github.com/sudheer-2323/simonGame" target="_blank">GitHub</a>
-            <a href="https://sudheer-2323.github.io/simonGame/" target="_blank">Live Demo</a>
-          </div>
-        </div>
-      </div>
+  <img src="images/simmon.jpg" alt="Portfolio Website Screenshot" class="project-image" />
+  <div class="project-overlay">
+  <h3 class="project-title">Simmon say game</h3>
+  <p>The Simon Says game you built using JavaScript, CSS, and HTML is a fun and interactive memory challenge that tests a player's ability to recall and replicate sequences.</p>
+  <div class="project-links">
+    <a href="https://github.com/sudheer-2323/portfolio" target="_blank">GitHub</a>
+    <a href="https://sudheer-2323.github.io/simonGame/" target="_blank" class="live-demo">Live Demo</a>
+  </div>
+  </div>
+</div>
+    
+        <div class="project-card">
+  <img src="images/port.jpg" alt="Portfolio Website Screenshot" class="project-image" />
+  <div class="project-overlay">
+  <h3 class="project-title">Portfolio Website</h3>
+  <p>My portfolio website, crafted using HTML, CSS, and JavaScript, serves as a dynamic showcase of your skills...</p>
+  <div class="project-links">
+    <a href="https://github.com/sudheer-2323/portfolio" target="_blank">GitHub</a>
+    <a href="https://sudheer-2323.github.io/portfolio/" target="_blank" class="live-demo">Live Demo</a>
+  </div>
+  </div>
+</div>
+</div>
+
     </section>
     
   </section>
@@ -102,22 +124,22 @@
     <h2 class="section-title">Achievements</h2>
     <div class="achievements-grid">
       <div class="achievement">
-        <img src="leetcode.jpg" alt="LeetCode Badge">
+        <img src="images/leetcode.jpg" alt="LeetCode Badge">
         <h3>100 Days Badge on LeetCode</h3>
         <p>My dedication, hard work, and consistency in coding have fueled my growth, sharpened my problem-solving skills, and built resilience.</p>
       </div>
       <div class="achievement">
-        <img src="gate.jpg" alt="GATE">
+        <img src="images/gate.jpg" alt="GATE">
         <h3>Qualified in GATE 2025</h3>
         <p>Strong foundation in core subjects like DBMS, OS, and CN, demonstrated by cracking GATE 2025.</p>
       </div>
       <div class="achievement">
-        <img src="jee.jpg" alt="JEE">
+        <img src="images/jee.jpg" alt="JEE">
         <h3>Qualified in JEE 2022</h3>
         <p>Cracked JEE Advance and Mains 2022, showcasing analytical skills and strong academic base.</p>
       </div>
       <div class="achievement">
-        <img src="th.jpeg" alt="Olympiads">
+        <img src="images/th.jpeg" alt="Olympiads">
         <h3>Excelled in Olympiads</h3>
         <p>State 1st in AMAT and 2nd in MM, reflecting early proficiency in logical and mathematical reasoning.</p>
       </div>
@@ -158,13 +180,21 @@
   </footer>
 
   <script>
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        window.scrollTo({ top: target.offsetTop - 20, behavior: 'smooth' });
-      });
-    });
+   document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    const href = link.getAttribute('href');
+
+    if (href.startsWith("http")) {
+      // Allow external links like Google Drive resume link to function
+      return;
+    }
+
+    e.preventDefault();
+    const target = document.querySelector(href);
+    window.scrollTo({ top: target.offsetTop - 20, behavior: 'smooth' });
+  });
+});
+
     const toggleBtn = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
 
