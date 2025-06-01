@@ -8,7 +8,7 @@
   /* Hero Section with Background Image */
 
 .hero {
-  background-image: url('images/portimag8.jpg'); /* Replace with your image path */
+  background-image: url('images/portimag6.jpg'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -168,7 +168,7 @@
   }
   
   section {
-    max-width: 1000px;
+    max-width: 90vw;
     margin: 40px auto;
     padding: 20px;
     background-color: #120f0f;
@@ -297,26 +297,54 @@ transform: scale(1.05) rotate(1deg);
     width: 90% !important;
   }
 
-  .project-image {
+  /* .project-image {
     height: 100%;
     object-fit: cover;
-  }
+  } */
 
   .project-overlay {
     padding: 0.5rem;
   }
   }
-  @media (max-width: 480px) {
+  @media (max-width: 450px) {
   .project-card {
-    width: 100% !important;
-    height: auto;
+    width: 100vw !important;
+    height: 65vh !important;
+  }
+  .project-image{
+    height: 25vh !important;
+  }
+  .overlay-image2,.overlay-image3{
+    display: none;
+  }
+  .overlay-image1{
+    left: 5vw !important;
+    bottom: 0px !important;
+    height: auto !important;
+    width: 290px !important;
+
+  }
+  .project-title i{
+    display: none;
+  }
+  .project-info{
+    height: 20vh !important;
+  }
+  .section-title{
+    font-size: 3rem !important;
+    font-weight: 200 !important;
   }
 }
 
 .section-title {
-font-size: 2.5em;
+/* font-size: 2.5em; */
 margin-bottom: 40px;
 color: #20b2aa;
+font-family: Larsseit, sans-serif;
+font-size: 5rem;
+font-weight: 800;
+position: sticky;
+text-align: center;
 }
 
 .projects-container {
@@ -351,35 +379,93 @@ margin-bottom: 10px;
   position: relative;
   overflow: hidden;
   margin-top: 70px;
-  border-radius: 20px;
-  height: 370px;
-  width:700px;
+  border-radius: 20px 20px 0 30px;
+  height: 103vh;
+  width:90vw;
   background-color: #111;
   color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
-.project-card:hover {
+/* .project-card:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+} */
+
+
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.project-image {
+  width: 90vw;
+  height: 70vh;
+  display: block;
+  /* transition: transform 2s ease; */
 }
 
-.project-image {
+/* .project-image {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 2s ease;
+} */
+
+.overlay-image1 {
+  position: absolute;
+  border-radius: 10px;
+  /* top: 10px;   adjust as needed */
+  left: 2.5vw;
+  top: 5vh;
+  width: 50vw; /* size of overlay image */
+  height: 60vh;
+  opacity: 0.9; /* optional */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
 
-.project-card:hover .project-image {
+
+.overlay-image2{
+   position: absolute;
+  border-radius: 10px;
+  top: 5vh;
+  right: 5vw;
+  width: 30vw; /* size of overlay image */
+  height: 29vh;
+  opacity: 0.9; /* optional */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+
+}
+.overlay-image3{
+   position: absolute;
+  border-radius: 10px;
+  bottom: 5vh;
+  right: 5vw;
+  width: 30vw; /* size of overlay image */
+  height: 29vh;
+  opacity: 0.9; /* optional */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+
+}
+.overlay-image1:hover,.overlay-image2:hover,.overlay-image3:hover{
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 255, 170, 0.3); 
+}
+
+
+
+
+/* .project-card:hover .project-image {
   transform: scale(1.1);
   opacity: 0.5;
-}
+} */
 .project-title-below {
   text-align: center;
   margin-top: 10px;
   font-size: 1.2em;
-  color: red;
+  color: rgb(43, 175, 72);
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -401,18 +487,14 @@ margin-bottom: 10px;
   z-index: 2;
 }
 
-.project-card:hover .project-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .project-links {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 .project-links a {
   margin: 0 10px;
-  color: #00ffaa;
+  color: #5748e2;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -425,7 +507,7 @@ margin-bottom: 10px;
 
 .project-links .live-demo {
   position: relative;
-  color: #00ffaa;
+  color: #5e8fc7;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -443,8 +525,38 @@ margin-bottom: 10px;
   transform: translateX(5px);
 }
 .project-title{
-  color: lightgoldenrodyellow;
+  color: white;
+  letter-spacing: -.07rem;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.2;
 }
+.project-titles{
+  background-color: #505a4f;
+  height: 15vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+.project-titles i {
+  font-size: 2rem; /* or 5vh as you had */
+  color: #ffffff; /* or any color that contrasts your background */
+  cursor: pointer;
+  z-index: 10;
+}
+.project-info{
+  margin-top: 0;
+  background-color: #505a4f;
+  text-align: center;
+  height: 15vh;
+  border-bottom-left-radius: 15px;
+  font-size: 1.2em;
+  font-family: 'Larsseit', sans-serif;
+
+}
+
 
 
 .intership-container {
